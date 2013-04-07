@@ -1,0 +1,30 @@
+body{
+	background-image: url("../img/wavegrid.png");
+}
+
+
+.selection-list{
+	list-style-type: none;
+	
+}
+.selection-list li{
+	border: 1px solid black;
+	padding: 5px;
+
+}
+.main-title{
+	text-align: center;
+}
+.title{
+	margin-left: auto;	
+	margin-right: auto;
+	width: 400px;
+}
+.title h1, .title p{
+	text-align: center;
+}
+
+.inner-wrapper{
+	margin-top: 60px;
+	margin-left: 0px;
+}
