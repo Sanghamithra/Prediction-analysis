@@ -28,3 +28,15 @@ body{
 	margin-top: 60px;
 	margin-left: 0px;
 }
+
+.selection-list {
+    margin-left: 0px;
+    margin-right: 50px;
+}
+.maprender{
+      height: 0%; margin: 10; padding: 0 
+}
+#map-canvas{
+	width: 600px;
+	height: 300px;
+}
