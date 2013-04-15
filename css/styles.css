@@ -2,16 +2,6 @@ body{
 	background-image: url("../img/wavegrid.png");
 }
 
-
-.selection-list{
-	list-style-type: none;
-	
-}
-.selection-list li{
-	border: 1px solid black;
-	padding: 5px;
-
-}
 .main-title{
 	text-align: center;
 }
@@ -30,9 +20,32 @@ body{
 }
 
 .selection-list {
+	width: 220px;
     margin-left: 0px;
     margin-right: 50px;
+    cursor: pointer;
+    list-style-type: none;
 }
+
+.selection-list li{
+	padding: 5px;
+
+}
+
+.selection-list li:hover {
+	background: #F5F6CE;
+	box-shadow: inset 0px 0px 5px #CCC;
+}
+
+.selection-list li:active {
+	background: #F2F5A9;
+	box-shadow: inset 0px 0px 10px #CCC;
+}
+
+.selection-list li .icon-holder {
+	min-width: 20px;
+} 
+
 .maprender{
       height: 0%; margin: 10; padding: 0 
 }

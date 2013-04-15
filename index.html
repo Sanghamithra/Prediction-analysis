@@ -1,61 +1,60 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)http://twitter.github.com/bootstrap/index.html -->
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Welcome</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <title>Welcome</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 100% }
-    </style>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
- >
-      <!-- Le styles -->
+  <style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map-canvas { height: 100% }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!--script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <script src="js/namespace.js"></script>
   <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>  
 <body data-spy="scroll" >
   <div class="jumbotron masthead">
     <div class="container">
-        <div class="title">
-          <h1>Welcome</h1>
-          <p>Make your food truck be located at a right place.</p>
+      <div class="title">
+        <h1>Welcome</h1>
+        <p>Make your food truck be located at a right place.</p>
         </div>
       <div class="row-fluid  inner-wrapper">
+        <div class="span2">
+        </div>
         <div class="span3">
           <form>
             <fieldset>
               <label>Enter your city name</label>
               <input type="text" placeholder="Type the zipcode / city name…">
               <span class="help-block"></span> 
-              <p>
-              <button class="btn btn-primary" type="button">Default button</button>
-              </p>
+              <button class="btn btn-primary" type="button">Submit</button>
             </fieldset>
           </form>
           <ul class="selection-list">
-            <li>option1</li>
-            <li>option2</li>
-            <li>option3</li>
-            <li>option4</li>  
-            <li>option5</li>
-          </ul>
-        </div>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>Schools</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>Events</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>Companies</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>Parking</li>
+            </ul>
+          </div>
         <div class= "span7">
-          <div id="map-canvas" >
+          <div id="map-canvas">
           </div>
         </div>
       </div>
     </div>
-  </div> 
-   <script src="js/maps.js"></script>
+  </div>
+  <script src="js/application.js"></script> 
+  <script src="js/maps.js"></script>
 </body>
 </html>
