@@ -27,7 +27,7 @@
 			map = FoodTruck.map, 	
 			request = {
 				location: currentLocation,
-				radius: '200',
+				radius: '400',
 				query: query  	
 			};
 		service = new google.maps.places.PlacesService(map);
