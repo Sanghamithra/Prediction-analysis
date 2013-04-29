@@ -24,10 +24,15 @@
     }
     FoodTruck.markers[query]=[];
     var currentLocation = FoodTruck.location,
-			map = FoodTruck.map, 	
+			map = FoodTruck.map,
+			markerIcons = {
+				'Schools':'../img/school.png',
+				'Parking':'../img/parking.png',
+				'Companies':'../img/company.png'
+			} 	
 			request = {
 				location: currentLocation,
-				radius: '400',
+				radius: '200',
 				query: query  	
 			};
 		service = new google.maps.places.PlacesService(map);
@@ -38,9 +43,15 @@
 			}
       console.log(data);
 			data.forEach(function(obj){
-				 var marker = new google.maps.Marker({
+				 var markerImg = markerIcons[query] ||  markerIcons['Schools'];
+				 //the second half of the or above puts schools marker as default incase markersIcons[query] is not found
+ 				 var marker = new google.maps.Marker({
 		            position: obj.geometry.location,
 		            map: map,
+		            icon: {
+		            	url: markerImg,
+		            	size: new google.maps.Size(20,32)
+		            },
 		            title: obj.name
 		        });
          FoodTruck.markers[query].push(marker);
