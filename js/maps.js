@@ -50,7 +50,7 @@
 		            map: map,
 		            icon: {
 		            	url: markerImg,
-		            	size: new google.maps.Size(20,32)
+		            	size: new google.maps.Size(15,15)
 		            },
 		            title: obj.name
 		        });

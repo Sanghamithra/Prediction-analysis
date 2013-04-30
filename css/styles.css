@@ -5,6 +5,24 @@ body{
 .main-title{
 	text-align: center;
 }
+
+.modal-body ul {
+	list-style-type: none;;
+}
+
+.modal-body {
+	text-align: center;
+}
+
+.user-login-details {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#no-user-error {
+	display: none;
+}
 .title{
 	margin-left: auto;	
 	margin-right: auto;
