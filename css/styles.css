@@ -43,6 +43,7 @@ body{
     margin-right: 50px;
     cursor: pointer;
     list-style-type: none;
+    display: none;
 }
 
 .selection-list li{

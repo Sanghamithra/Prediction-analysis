@@ -6,9 +6,10 @@
   	if (userName) {
   		$('.user-login-details .user-name').text(' You are logged in as '+userName);
   		$('.user-login-details .user-logout').text('LogOut');
+  		$('.selection-list').show();
   	}
   	if (userName && email) {
-  		$('.user-login-details').append('('+email+')');
+  		$('.user-login-details .user-email').append('('+email+')');
   	}
   	//remove the above if loop if you want to remove email
   }
@@ -30,11 +31,9 @@
   	if (email) {
   		Cookies.set('foodtruck-user-email',email);
   	}
-  	$('.user-login-details .user-name').text(' You are logged in as '+userName);
-  	$('.user-login-details .user-email').text('('+email+')');
-  	//remove the above line if you want to remove email
-  	$('.user-login-details .user-logout').text('LogOut');
+  	initUserLogin();
   	$('#sign-in-modal').modal('hide');
+
   }
 
   FoodTruck.application.logMeOut = logMeOut = function(){
@@ -42,6 +41,7 @@
   	Cookies.set('foodtruck-user-email','',{expires:-6000});
   	$('.user-login-details span').empty();
   	$('.user-login-details a').empty();
+  	$('.selection-list').hide();
   }
 
   //init function called
