@@ -13,6 +13,7 @@
   	if (userName && email) {
   		$('.user-login-details .user-email').append('('+email+')');
   	}
+    
   	//remove the above if loop if you want to remove email
   }
 
@@ -61,6 +62,7 @@
   	$('.user-login-details span').empty();
   	$('.user-login-details a').empty();
   	$('.selection-list').hide();
+    $('.sub-list-wrapper').show();
   }
  FoodTruck.application.handler= handler= function(event){
     var $target =$(event.target);
@@ -93,7 +95,7 @@
   $('button#login-user').on('click',logMeIn);
   $('a[class="user-logout"]').on('click',logMeOut);
   //$('ul.display-list').on('click','ul',handleFilters);
-  $('display-list.list1').on('click','li',handleFilters);
+  //$('display-list.list1').on('click','li',handleFilters);
 
 
 }());

@@ -63,7 +63,9 @@ body{
 .selection-list li .icon-holder {
 	min-width: 20px;
 } 
-
+.sub-list-wrapper {
+	display: block !important;
+}
 
 .maprender{
       height: 0%; margin: 10; padding: 0 
