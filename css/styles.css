@@ -48,7 +48,6 @@ body{
 
 .selection-list li{
 	padding: 5px;
-
 }
 
 .selection-list li:hover {
@@ -64,6 +63,7 @@ body{
 .selection-list li .icon-holder {
 	min-width: 20px;
 } 
+
 
 .maprender{
       height: 0%; margin: 10; padding: 0 

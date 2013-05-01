@@ -54,6 +54,7 @@
 		            },
 		            title: obj.name
 		        });
+ 				 marker.setVisible(false);
          FoodTruck.markers[query].push(marker);
 			});
 		});

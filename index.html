@@ -40,9 +40,30 @@
             <fieldset>
               <label>Enter your city name</label>
               <input type="text" placeholder="Type the zipcode / city name…">
-              <span class="help-block"></span> 
+              <!--span class="help-block"></span> 
+              <div class= "dropdown">
               <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown" >Action<span class="caret"></span></button>
+                
+                <button class="btn dropdown-toggle" data-toggle="dropdown" >Action 1<span class="caret"></span></button>
+
+                <ul class="dropdown-menu">
+                  <li><i class="icon-ok"></i>Action 1</li>
+                  <li><i class="icon-ok"></i>Action 2</li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Action 3</a>
+                    <ul class="dropdown-menu">
+                      <li><i class="icon-ok"></i>Action 3 - 1</li>
+                      <li><i class="icon-ok"></i>Action 3 - 2</li>
+                    </ul>
+                  </li>
+                  <li><i class="icon-ok"></i>Action 4</li>
+                </ul>
+                
+              </div>
+                <span class="help-block"></span> 
+                <div class="btn-group">
+                
+                 <button class="btn dropdown-toggle" data-toggle="dropdown" >Action2<span class="caret"></span></button>
                 <ul class="dropdown-menu">
                   <li><i class="icon-ok"></i>Action 1</li>
                   <li><i class="icon-ok"></i>Action 2</li>
@@ -56,15 +77,108 @@
                   <li><i class="icon-ok"></i>Action 4</li>
                 </ul>
               </div>
+                <span class="help-block"></span> 
+                <div class="btn-group">
+                
+                 <button class="btn dropdown-toggle" data-toggle="dropdown" >Action3<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><i class="icon-ok"></i>Action 1</li>
+                  <li><i class="icon-ok"></i>Action 2</li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Action 3</a>
+                    <ul class="dropdown-menu">
+                      <li><i class="icon-ok"></i>Action 3 - 1</li>
+                      <li><i class="icon-ok"></i>Action 3 - 2</li>
+                    </ul>
+                  </li>
+                  <li><i class="icon-ok"></i>Action 4</li>
+                </ul>
+              </ul>
+              </div>
+              </div-->
+              <span class="help-block"></span> 
               <button class="btn btn-primary" type="button">Submit</button>
             </fieldset>
           </form>
-          <ul class="selection-list">
-            <li><div class="icon-holder"><i class="icon-ok"></i></div>Schools</li>
-            <li><div class="icon-holder"><i class="icon-ok"></i></div>Events</li>
-            <li><div class="icon-holder"><i class="icon-ok"></i></div>Companies</li>
-            <li><div class="icon-holder"><i class="icon-ok"></i></div>Parking</li>
-            <li><div class="icon-holder"><i class="icon-ok"></i></div>Traffic</li>
+          <ul class = "selection-list">
+            <li class="expand-list">
+              <span >List1</span>
+              <ul class ="sub-list selection-list">
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist1
+                </li>
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist2
+                </li>
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist3
+                </li>
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist4
+                </li>
+              </ul>
+            </li>
+            <li class="expand-list">
+              <span >List2</span>
+                <ul class ="sub-list selection-list">
+                  <li class = "inner">
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist1
+                  </li>
+                  <li>
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist2
+                  </li>
+                  <li>
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist3
+                  </li>
+                  <li>
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist4
+                  </li>
+                </ul>
+            </li>
+          </ul>
+          <!--ul class="list1">list1
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist1</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist2</li>
+          </ul>
+          <ul class="list2">list2
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist1</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist2</li>
+          </ul>
+          <ul class="list3">list3
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist1</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist2</li>
+          </ul-->
+          
+          <ul class="map-filters selection-list">
+            <li><div class="icon-holder"><i class=""></i></div>Schools</li>
+            <li><div class="icon-holder"><i class=""></i></div>Events</li>
+            <li><div class="icon-holder"><i class=""></i></div>Companies</li>
+            <li><div class="icon-holder"><i class=""></i></div>Parking</li>
+            <li><div class="icon-holder"><i class=""></i></div>Traffic</li>
             </ul>
             <p>Please Login to Save your search or View more Search fiters</p>
             <button href="#sign-in-modal" role="button" class="btn btn-info" data-toggle="modal">Sign In</button>

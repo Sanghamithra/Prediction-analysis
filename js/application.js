@@ -1,5 +1,7 @@
 (function(){
 
+
+
   FoodTruck.application.initUserLogin = initUserLogin = function() {
   	var userName = Cookies.get('foodtruck-user'),
   		email = Cookies.get('foodtruck-user-email');
@@ -15,9 +17,26 @@
   }
 
   FoodTruck.application.handleFilters = handleFilters = function(e) {
-    var $eItem = $(e.target).closest('li');
+    var $eItem = $(e.target).closest('li'),
+        data = $(e.target).text().trim();
+    if ($eItem.hasClass('expand-list'))
+        return; 
   	$eItem.find('i').toggleClass('icon-ok');
-    FoodTruck.maps.toggleMarkers($eItem.text());
+    if ($eItem.parent().hasClass('map-filters')) {
+      FoodTruck.maps.toggleMarkers($eItem.text());
+    } else {
+      console.log('we are going to send `'+data+'` through GET request to the server');
+      $.get('../server/getdata.java',{
+        query: data
+      }, function(data) {
+        console.log('server has returned data shown below');
+        console.log(data);
+      }).fail(function(){
+        console.log('ERROR: Bad/No response from server');
+      });
+      e.stopPropagation();
+    }
+    
   }
 
   FoodTruck.application.logMeIn = logMeIn = function() {
@@ -43,13 +62,38 @@
   	$('.user-login-details a').empty();
   	$('.selection-list').hide();
   }
+ FoodTruck.application.handler= handler= function(event){
+    var $target =$(event.target);
+    if($target.is("li")){
+      $target.children().toggle();
+    }
+  }
+  
+  FoodTruck.application.showSubList = showSubList = function(e){
+    var $target = $(e.target).closest('li');
+    $target.children('.sub-list').toggle();
+
+  }
+  //$("display-list").click(handler).find("display-list").hide();
+
+  //FoodTruck.application.display-handlers=display-handlers=function(h){
+   // var $HItem = $(h.target).closest('li');
+   // $HItem.find('i').toggleClass('icon-ok');
+    
+
+  //}
 
   //init function called
   initUserLogin();
+  $('ul.sub-list').hide();
 
   //event handlers below
+  $('.expand-list').on('click',showSubList);
   $('ul.selection-list').on('click','li',handleFilters);
   $('button#login-user').on('click',logMeIn);
-  $('a[class="user-logout"]').on('click',logMeOut)
-;
+  $('a[class="user-logout"]').on('click',logMeOut);
+  //$('ul.display-list').on('click','ul',handleFilters);
+  $('display-list.list1').on('click','li',handleFilters);
+
+
 }());
