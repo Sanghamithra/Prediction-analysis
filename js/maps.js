@@ -19,29 +19,29 @@
   //this function sets the markers on the map initially
 	FoodTruck.maps.setMarkers = setMarkers = function(query) {
 		if (!query){
-      console.log('No query specified');
-      return;
-    }
-    FoodTruck.markers[query]=[];
-    var currentLocation = FoodTruck.location,
-			map = FoodTruck.map,
-			markerIcons = {
-				'Schools':'../img/school.png',
-				'Parking':'../img/parking.png',
-				'Companies':'../img/company.png'
-			} 	
-			request = {
-				location: currentLocation,
-				radius: '200',
-				query: query  	
-			};
-		service = new google.maps.places.PlacesService(map);
-		service.textSearch(request, function(data) {
-			if (!(data instanceof Array)){
-				console.log('ERROR: invalid response from server');
-				return;
-			}
-      console.log(data);
+		      console.log('No query specified');
+		      return;
+		    }
+		    FoodTruck.markers[query]=[];
+		    var currentLocation = FoodTruck.location,
+					map = FoodTruck.map,
+					markerIcons = {
+						'Schools':'../../img/school.png',
+						'Parking':'../../img/parking.png',
+						'Companies':'../../img/company.png'
+					} 	
+					request = {
+						location: currentLocation,
+						radius: '200',
+						query: query  	
+					};
+			service = new google.maps.places.PlacesService(map);
+			service.textSearch(request, function(data) {
+					if (!(data instanceof Array)){
+						console.log('ERROR: invalid response from server');
+						return;
+					}
+		     console.log(data);
 			data.forEach(function(obj){
 				 var markerImg = markerIcons[query] ||  markerIcons['Schools'];
 				 //the second half of the or above puts schools marker as default incase markersIcons[query] is not found

@@ -1,7 +1,4 @@
 (function(){
-
-
-
   FoodTruck.application.initUserLogin = initUserLogin = function() {
   	var userName = Cookies.get('foodtruck-user'),
   		email = Cookies.get('foodtruck-user-email');
@@ -64,12 +61,7 @@
   	$('.selection-list').hide();
     $('.sub-list-wrapper').show();
   }
- FoodTruck.application.handler= handler= function(event){
-    var $target =$(event.target);
-    if($target.is("li")){
-      $target.children().toggle();
-    }
-  }
+ 
   
   FoodTruck.application.showSubList = showSubList = function(e){
     var $target = $(e.target).closest('li');
