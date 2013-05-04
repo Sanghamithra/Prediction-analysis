@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Welcome</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/cookies.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+ <!-- <script src="signup_form.js"></script> -->
+   <script src="js/namespace.js"></script>
+  <!--script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+ 
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>  
+<body data-spy="scroll" >
+
+  <div class="jumbotron masthead">
+    <div class="container">
+      <div class="title">
+        <h1><img src="img/Food_truck.png" alt ="Food_truck" width="100" height ="100">Food-Truck</h1>
+
+        <p>Make your food truck be located at a right place.</p>
+      </div>
+      <div class="user-login-details">
+       <span class="user-name"></span><span class="user-email"></span><br/>
+        <a href="javascript:void(0)" class="user-logout"></a>
+      </div>
+      <div class="row-fluid  inner-wrapper">
+       <div class="span2">
+        </div> 
+        <div class="span3">
+          <form>
+            <fieldset>
+              <label>Enter your city name</label>
+              <input type="text" placeholder="Type the zipcode / city name…">
+              <!--span class="help-block"></span> 
+              <div class= "dropdown">
+              <div class="btn-group">
+                
+                <button class="btn dropdown-toggle" data-toggle="dropdown" >Action 1<span class="caret"></span></button>
+
+                <ul class="dropdown-menu">
+                  <li><i class="icon-ok"></i>Action 1</li>
+                  <li><i class="icon-ok"></i>Action 2</li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Action 3</a>
+                    <ul class="dropdown-menu">
+                      <li><i class="icon-ok"></i>Action 3 - 1</li>
+                      <li><i class="icon-ok"></i>Action 3 - 2</li>
+                    </ul>
+                  </li>
+                  <li><i class="icon-ok"></i>Action 4</li>
+                </ul>
+                
+              </div>
+                <span class="help-block"></span> 
+                <div class="btn-group">
+                
+                 <button class="btn dropdown-toggle" data-toggle="dropdown" >Action2<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><i class="icon-ok"></i>Action 1</li>
+                  <li><i class="icon-ok"></i>Action 2</li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Action 3</a>
+                    <ul class="dropdown-menu">
+                      <li><i class="icon-ok"></i>Action 3 - 1</li>
+                      <li><i class="icon-ok"></i>Action 3 - 2</li>
+                    </ul>
+                  </li>
+                  <li><i class="icon-ok"></i>Action 4</li>
+                </ul>
+              </div>
+                <span class="help-block"></span> 
+                <div class="btn-group">
+                
+                 <button class="btn dropdown-toggle" data-toggle="dropdown" >Action3<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><i class="icon-ok"></i>Action 1</li>
+                  <li><i class="icon-ok"></i>Action 2</li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Action 3</a>
+                    <ul class="dropdown-menu">
+                      <li><i class="icon-ok"></i>Action 3 - 1</li>
+                      <li><i class="icon-ok"></i>Action 3 - 2</li>
+                    </ul>
+                  </li>
+                  <li><i class="icon-ok"></i>Action 4</li>
+                </ul>
+              </ul>
+              </div>
+              </div-->
+              
+            </fieldset>
+          </form>
+          <ul class="selection-list sub-list-wrapper">
+            <li class="expand-list">
+              <span >List1</span>
+              <ul class ="sub-list selection-list">
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist1
+                </li>
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist2
+                </li>
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist3
+                </li>
+                <li>
+                  <div class= "icon-holder">
+                    <i class =""></i>
+                  </div>
+                  Sublist4
+                </li>
+              </ul>
+            </li>
+            <li class="expand-list">
+              <span >List2</span>
+                <ul class ="sub-list selection-list">
+                  <li class = "inner">
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist1
+                  </li>
+                  <li>
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist2
+                  </li>
+                  <li>
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist3
+                  </li>
+                  <li>
+                    <div class= "icon-holder">
+                      <i class =""></i>
+                    </div>
+                    Sublist4
+                  </li>
+                </ul>
+            </li>
+          </ul>
+          <!--ul class="list1">list1
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist1</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist2</li>
+          </ul>
+          <ul class="list2">list2
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist1</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist2</li>
+          </ul>
+          <ul class="list3">list3
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist1</li>
+            <li><div class="icon-holder"><i class="icon-ok"></i></div>sublist2</li>
+          </ul-->
+
+          <span class="help-block"></span> 
+              <button class="btn btn-primary" type="button">Submit</button>
+          
+          <ul class="map-filters selection-list">
+            <li><div class="icon-holder"><i class=""></i></div>Schools</li>
+            <li><div class="icon-holder"><i class=""></i></div>Events</li>
+            <li><div class="icon-holder"><i class=""></i></div>Companies</li>
+            <li><div class="icon-holder"><i class=""></i></div>Parking</li>
+            <li><div class="icon-holder"><i class=""></i></div>Traffic</li>
+            </ul>
+            <span class="help-block"></span>
+            <p>Click on SignIn to View more Options</p>
+            <button href="#sign-in-modal" role="button" class="btn btn-info" data-toggle="modal">Sign In</button>
+          </div>
+        <div class= "span7">
+          <div id="map-canvas">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal -->
+  <div id="sign-in-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Sign In</h3>
+    </div>
+    <div class="modal-body">
+      <div class="row-fluid">
+        <div class="span6">
+          User Name: 
+        </div>
+        <div class="span6">
+        <input type="text" id="user-name">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          E-Mail (optional):
+        </div>
+        <div class="span6">
+          <input type="text" id="email">
+        </div>
+      </div>
+      <div id="no-user-error"class="row-fluid">
+        **** User Name is a required field
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <button id="login-user" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+  <script src="js/application.js"></script> 
+  <script src="js/maps.js"></script>
+</body>
+</html>

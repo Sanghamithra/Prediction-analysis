@@ -1,0 +1,76 @@
+body{
+	background-image: url("../img/wood_pattern.png");
+}
+
+.main-title{
+	text-align: center;
+}
+
+.modal-body ul {
+	list-style-type: none;;
+}
+
+.modal-body {
+	text-align: center;
+}
+
+.user-login-details {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#no-user-error {
+	display: none;
+}
+.title{
+	margin-left: auto;	
+	margin-right: auto;
+	width: 400px;
+}
+.title h1, .title p
+{	text-align: center;
+}
+
+.inner-wrapper{
+	margin-top: 60px;
+	margin-left: 0px;
+}
+
+.selection-list {
+	width: 220px;
+    margin-left: 0px;
+    margin-right: 50px;
+    cursor: pointer;
+    list-style-type: none;
+    display: none;
+}
+
+.selection-list li{
+	padding: 5px;
+}
+
+.selection-list li:hover {
+	background: #F5F6CE;
+	box-shadow: inset 0px 0px 5px #CCC;
+}
+
+.selection-list li:active {
+	background: #F2F5A9;
+	box-shadow: inset 0px 0px 10px #CCC;
+}
+
+.selection-list li .icon-holder {
+	min-width: 20px;
+} 
+.sub-list-wrapper {
+	display: block !important;
+}
+
+.maprender{
+      height: 0%; margin: 10; padding: 0 
+}
+#map-canvas{
+	width: 600px;
+	height: 300px;
+}
