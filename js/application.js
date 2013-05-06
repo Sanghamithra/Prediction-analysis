@@ -81,7 +81,7 @@
     console.log('Current width is: '+document.width+'px');
     if (document.width < 1025) {
       $('#map-canvas').css('width','480px');
-    } else {
+    } else if($('#map-canvas').css('width') !='600px') {
       $('#map-canvas').css('width','600px');
     }
   }
