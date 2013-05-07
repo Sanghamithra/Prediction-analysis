@@ -23,35 +23,34 @@
 
   <div class="jumbotron masthead">
     <div class="container">
-      <div class="title">
-        <h1><img src="img/Food_truck.png" alt ="Food_truck" width="100" height ="100">Food-Truck</h1>
-
-        <p>Make your food truck be located at a right place.</p>
-      </div>
+      
+        
+      
+       <h1><img src="img/Food_truck.png" alt ="Food_truck" width="75" height ="75"><font size= "12">Food-Truck Prediction</font></h1>
+        <!--p>Make your food truck be located at a right place.</p-->
+      
       <div class="user-login-details">
        <span class="user-name"></span><span class="user-email"></span><br/>
         <a href="javascript:void(0)" class="user-logout"></a>
       </div>
       <div class="row-fluid  inner-wrapper">
-       <div class="span2">
-        </div> 
-        <div class="span3">
+        <div class="span5">
+          <div class="control-wrapper">
           <form>
             <fieldset>
               <label>Enter your city name</label>
-              <input type="text" placeholder="Type the zipcode / city name…">
+              <input type="text" placeholder="Type the zipcode / city name…" class="input-medium">
               <span class="help-block"></span>
             </fieldset>
           </form>
-            <ul class="selection-list sub-list-wrapper">
-              <li class="expand-list">
                  <span >Please Select Your Preferences:</span>
-                      <ul class ="sub-list selection-list">
+                     
                         <form>
                       <fieldset>
                         <label class="lab" style="font-weight:bold">Time</label>
                         <!-- select name="hour" class="sp1"-->
-                        <select name="hour" style="width: 75px;" class="sp1">
+                        
+                        <select name="hour" style="width: 100px;" class="sp1">
                         <option  value="None">None</option>
                         <option  value="00">00</option>
                         <option  value="01">01</option>
@@ -78,16 +77,17 @@
                         <option  value="22">22</option>
                         <option  value="23">23</option>
                         </select>
-                        <select name="minute" style="width: 75px;" class="sp1">
+                        <select name="minute" style="width: 100px;" class="sp1">
                         <option  value="None">None</option>
                         <option  value="00">00</option>
                         <option  value="15">15</option>
                         <option  value="30">30</option>
                         <option  value="45">45</option>
                         </select>
-                        <br/><br/>
+                        <!--br/><br/-->
+                        <span class="help-block"></span>
                         <label class="lab" style="font-weight:bold">Location Preference-1</label>
-                        <select name="preference-1" style="width: 150px; class="sp1">
+                        <select name="preference-1" style="width: 200px"; class="sp1">
                         <option  value="None">None</option>       
                         <option  value="School">Schools</option>
                         <option  value="College">Colleges</option>
@@ -99,9 +99,9 @@
                         <option  value="Club">Clubs/Lounges</option>
                         <option  value="Park">Parks</option>
                         </select>
-                        <br/><br/>
+                        
                         <label class="lab" style="font-weight:bold">Location Preference-2</label>
-                        <select name="preference-2" style="width: 150px; class="sp1">
+                        <select name="preference-2" style="width: 200px"; class="sp1">
                         <option  value="None">None</option>       
                         <option  value="School">Schools</option>
                         <option  value="College">Colleges</option>
@@ -113,33 +113,40 @@
                         <option  value="Club">Clubs/Lounges</option>
                         <option  value="Park">Parks</option>
                         </select>
-                        <br/><br/>
+                        <!--br/><br/-->
+                        
                         <label class="lab" style="font-weight:bold">Cuisine</label>
-                        <select name="cuisine" style="width: 150px; class="sp1">
+                        <select name="cuisine" style="width: 200px; class="sp1">
                         <option  value="None">None</option>
                         <option  value="Asian">Asian</option>
                         <option  value="Chinese">Chinese</option>
                         <option  value="Mexican">Mexican</option>
                         </select>
-                        <br/><br/>
+                        
                         <label class="lab" style="font-weight:bold">Temperature</label>
-                        <select name="temperature" style="width: 150px; class="sp1">
+                        
+                        <select name="temperature" style="width: 200px; class="sp1">
                         <option  value="None">None</option>       
                         <option value="less">Lower</option>
                         <option value="more">Higher</option>
                         </select> 
-                        <br/>
-                          <span class="help-block"></span>
+                        <!--br/-->
+                          
+                                <div class ="btn-group">
                                 <button class="btn btn-primary" type="button" onclick="plotFinalSpot();">Submit</button>
+                                    <span class="caret"></span>
+                                <!--span class="help-block"></span-->
+                              <!--p>More Preferences..!! Click On Sign In </p-->
+                              <button href="#sign-in-modal" role="button" class="btn btn-info" data-toggle="modal">Sign In</button>
                         
                   <!--div  style="border:1px solid black"  class= "span3"-->
                     <!--div id="map-canvas">
                     </div-->
-                  
+                          </fieldset>
                         </form>
-                      </ul>
-                    </li>
-                  </ul>
+                      <!--/ul>
+                    <!--/li-->
+                  <!--/ul-->
                   
             
 
@@ -184,19 +191,19 @@
             <li><div class="icon-holder"><i class=""></i></div>Parking</li>
             <li><div class="icon-holder"><i class=""></i></div>Traffic</li>
             </ul>
-            <span class="help-block"></span>
-            <p>More Preferences..!! Click On Sign In </p>
-            <button href="#sign-in-modal" role="button" class="btn btn-info" data-toggle="modal">Sign In</button>
+            
 
 
           </div>
+        </div>
         <div class= "span7">
           <div id="map-canvas">
           </div>
         </div>
-      </div>
+      
     </div>
   </div>
+  
    <!-- Modal -->
   
   <script src="js/application.js"></script> 
