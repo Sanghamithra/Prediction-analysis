@@ -1,4 +1,7 @@
 (function(){
+
+
+
   FoodTruck.application.initUserLogin = initUserLogin = function() {
   	var userName = Cookies.get('foodtruck-user'),
   		email = Cookies.get('foodtruck-user-email');
@@ -61,13 +64,28 @@
   	$('.selection-list').hide();
     $('.sub-list-wrapper').show();
   }
- 
+ FoodTruck.application.handler= handler= function(event){
+    var $target =$(event.target);
+    if($target.is("li")){
+      $target.children().toggle();
+    }
+  }
   
   FoodTruck.application.showSubList = showSubList = function(e){
     var $target = $(e.target).closest('li');
     $target.children('.sub-list').toggle();
 
   }
+
+  FoodTruck.application.responsiveMap = responsiveMap = function(){
+    console.log('Current width is: '+document.width+'px');
+    if (document.width < 1025) {
+      $('#map-canvas').css('width','480px');
+    } else if($('#map-canvas').css('width') !='600px') {
+      $('#map-canvas').css('width','600px');
+    }
+  }
+
   //$("display-list").click(handler).find("display-list").hide();
 
   //FoodTruck.application.display-handlers=display-handlers=function(h){
@@ -86,6 +104,7 @@
   $('ul.selection-list').on('click','li',handleFilters);
   $('button#login-user').on('click',logMeIn);
   $('a[class="user-logout"]').on('click',logMeOut);
+  $(window).on('resize',responsiveMap);
   //$('ul.display-list').on('click','ul',handleFilters);
   //$('display-list.list1').on('click','li',handleFilters);
 

@@ -109,9 +109,9 @@
     var currentLocation = FoodTruck.newLocation || FoodTruck.location,
 			map = FoodTruck.map,
 			markerIcons = {
-				'Schools':'../images/school.png',
-				'Parking':'../images/parking.png',
-				'Companies':'../images/company.png'
+				'Schools':'../img/school.png',
+				'Parking':'../img/parking.png',
+				'Companies':'../img/company.png'
 			} 	
 			request = {
 				location: currentLocation,
